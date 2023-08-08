@@ -1,0 +1,165 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap');
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%)
+}
+
+p{
+    font-size: 14px;
+}
+
+body{
+    background-color: var(--Cream);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+main {
+width: 38%;
+min-width: 584px;
+max-width: 584px;
+
+}
+
+.card-container{
+display: flex;
+width: 100%;
+background-color: var(--White);
+border-radius: 10px;
+}
+
+.img-container {
+    width: 50%;
+}
+.img-container img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.card-container img{
+    border-radius: 10px 0 0 10px;
+}
+
+.card-info{
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 50%;
+
+    
+}
+
+.card-info h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: .8rem;
+    font-weight: 400;
+    letter-spacing: .3rem;
+    color: var(--Dark-grayish-blue);
+}
+
+.card-info h1{
+    font-family: 'Fraunces', serif;
+    line-height: 2rem;
+}
+
+.card-info p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: .9rem;
+    line-height: 1.5rem;
+    color: var(--Dark-grayish-blue);
+}
+
+.price{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+}
+
+.span-1{
+    color: var(--Dark-cyan);
+    font-size: 2rem;
+    font-family: 'Fraunces', serif;
+}
+
+.span-2{
+    font-family: 'Montserrat', sans-serif;
+    color: var(--Dark-grayish-blue);
+    font-size: .8rem;
+    text-decoration: line-through;
+}
+
+button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .8rem;
+    margin: auto;
+    width: 100%;
+    padding: .8rem 0; 
+    background-color: var(--Dark-cyan);
+    border-radius: 5px;
+    outline: none;
+    color: var(--White);
+    border: 1px solid var(--Dark-cyan);
+}
+
+button span{
+    font-weight: 700;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: rgb(26, 56, 45);
+    border: 1px solid rgb(26, 56, 45);
+}
+
+@media screen and (max-width:600px) {
+
+    main {
+        width: 80%;
+        min-width: 300px;
+        max-width: 350px;
+       
+        padding: 3rem 0rem;
+    }
+    .card-container{
+        flex-direction: column;
+        gap: .5rem;
+    }
+
+    .img-container, .card-info {
+        width: 100%;
+    }
+
+    .img-container {
+        height: 270px;
+    }
+    .card-info {
+        height: 60%;
+    }
+    .img-container img{
+        border-radius: 10px 10px 0 0 ;
+    }
+    
+
+}
+
+
